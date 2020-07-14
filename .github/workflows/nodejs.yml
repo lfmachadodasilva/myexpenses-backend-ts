@@ -32,3 +32,11 @@ jobs:
                   npm run build --if-present
               env:
                   CI: true
+            - name: Deploy 🚀
+              uses: JamesIves/github-pages-deploy-action@releases/v3
+              env:
+                  GOOGLE_APPLICATION_CREDENTIALS: util/firebase.json
+              with:
+                  ACCESS_TOKEN: '${{ secrets.GH_PAGES }}'
+                  BRANCH: gh-pages
+                  FOLDER: dist
