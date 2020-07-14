@@ -1,0 +1,1 @@
+{"version":3,"file":"expense.js","sourceRoot":"","sources":["../../src/controllers/expense.ts"],"names":[],"mappings":";;;AAEA;;GAEG;AACU,QAAA,QAAQ,GAAG,CAAC,GAAY,EAAE,GAAa,EAAE,EAAE;IACpD,GAAG,CAAC,IAAI,CAAC;QACL,EAAE,EAAE,EAAE,IAAI,EAAE,IAAI,EAAE,WAAW,EAAE;QAC/B,EAAE,EAAE,EAAE,IAAI,EAAE,IAAI,EAAE,WAAW,EAAE;KAClC,CAAC,CAAC;AACP,CAAC,CAAC"}
