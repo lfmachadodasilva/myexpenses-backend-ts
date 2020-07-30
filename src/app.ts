@@ -1,22 +1,26 @@
 import express from 'express';
 
-// Controllers (route handlers)
-import * as homeController from './controllers/home';
-import * as userController from './controllers/user';
-import * as groupController from './controllers/group';
-import * as labelController from './controllers/label';
-import * as expenseController from './controllers/expense';
+// Routers (route handlers)
+import { homeRouter } from './routers/home';
+import { userRouter } from './routers/user';
+import { groupRouter } from './routers/group';
+import { labelRouter } from './routers/label';
+import { expenseRouter } from './routers/expense';
 
 // Create Express server
 const app = express();
 
+// Define port to be used
 app.set('port', process.env.PORT || 3000);
 
-app.get('/api/', homeController.getIndex);
-app.get('/api/expense', expenseController.getIndex);
-app.get('/api/user', userController.getIndex);
-app.get('/api/group', groupController.getIndex);
-app.get('/api/label', labelController.getIndex);
-app.get('/api/expense', expenseController.getIndex);
+// Use json
+app.use(express.json());
+
+// Use routers
+app.use(expenseRouter);
+app.use(groupRouter);
+app.use(homeRouter);
+app.use(labelRouter);
+app.use(userRouter);
 
 export default app;
