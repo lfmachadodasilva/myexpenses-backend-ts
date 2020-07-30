@@ -22,7 +22,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const admin = __importStar(require("firebase-admin"));
 admin.initializeApp({
     credential: admin.credential.applicationDefault(),
-    databaseURL: 'https://myexpenses-6e402.firebaseio.com',
+    databaseURL: 'https://myexpenses-6e402.firebaseio.com'
 });
 exports.default = admin;
 //# sourceMappingURL=firebase.js.map
